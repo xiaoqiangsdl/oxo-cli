@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 
+// var path = require('path');
+// var fs = require('fs');
+// console.log(path.join(__dirname, '.oxorc'))
+// console.log(JSON.parse(fs.readFileSync(path.join(__dirname, '.oxorc'), 'utf-8')));
+
 require('commander')
   .version(require('../package').version)
   .usage('<command> [options]')
   .command('init', 'Generate a new project from a template')
-  .command('list', 'List available official templates')
+  .command('list', 'List available custom templates')
   .command('add', 'Add a new custom templete')
+  .command('del', 'Delete a custom templete')
   .parse(process.argv)
